@@ -29,5 +29,11 @@ def convert():
 def download(filename):
     return send_file(filename, as_attachment=True)
 
+@app.route('templates/index')
+def index():
+    return "welcome"
+
+
+
 if __name__ == '__main__':
     app.run(debug=True)
